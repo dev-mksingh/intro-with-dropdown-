@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul a {
+    display: block;
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+}
+
+header button {
+    width: 30px;
+    height: 30px;
+    background-image: url('images/icon-menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+
+header button:hover {
+    cursor: pointer;
+}
+
+.close-menu {
+    background-image: url('images/icon-close-menu.svg');
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.close-modal {
+    display: block;
+}
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    background-color: rgba(26, 26, 26, 0.76);
+}
+
+.page-link, .sign-in {
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+}
+
+
+.sign-in {
+    text-align: center;
+    justify-content:flex-start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.login, .register {
+    width: 60%;
+    height: 40px;
+}
+
+.register {
+    border: 1px solid black;
+}
+
+.login a,.register a{
+    height: 100%;
+    padding-top: 10px;
+}
+
+.submenu {
+    display: none;
+    width: 60%;
+    margin-left: 20px;
+}
+
+.submenu-display {
+    display: block;
+}
+
+.submenu li {
+    margin-top: 5px;
+}
+
+/* main-content */
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.content-image img {
+    width: 100%;
+}
+
+.content-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.content-container p {
+    padding: 15px 20px 15px 20px;
+}
+
+h1, p{
+    text-align: center;
+}
+
+.content-container button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.company-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.company-list img {
+    width: 80px;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+
+    header {
+        display: flex;
+    }
+
+    header button {
+        display: none;
+    }
+
+    .modal {
+        display: block;
+        height: 5vh;
+        position: relative;
+    }
+
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .page-link, .sign-in {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+    }
+
+    .sign-in {
+        padding-top: 0;
+        width: 300px;
+    }
+
+    .page-link a , .sign-in a {
+        padding: 0;
+        padding-top: 5px;
+    }
+
+    .login, .register {
+        height: 100%;
+    }
+
+    .page-link> li {
+        position: relative;
+    }
+
+    .submenu{
+        position: absolute;
+        width: 100px;
+        margin: 0;
+    }
+
+    .feature ul{
+        left: -15px;
+    }
+}
+
+@media screen and (min-width: 756px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 80%;
+        height: 80vh;
+    }
+
+    .content-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+
+    .content-container {
+        height: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1, p{
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .content-container p {
+        padding-left: 0;
+    }
+}
