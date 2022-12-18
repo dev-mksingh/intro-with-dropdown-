@@ -229,8 +229,11 @@ h1, p{
 
     .submenu{
         position: absolute;
-        width: 100px;
+        width: 120px;
         margin: 0;
+        background-color: wheat;
+        border-radius: 5px;
+        padding: 5px;
     }
 
     .feature ul{
